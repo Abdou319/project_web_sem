@@ -60,75 +60,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>🎓 Knowledge Graph Desktop</h1>
-      <p>
-        Application de gestion de graphes de connaissances avec support RDF, OWL, SPARQL et
-        raisonnement sémantique.
-      </p>
-
-      <h2>📦 Modules</h2>
-
-      <div class="module">
-        <h3>Core <span class="status ready">READY</span></h3>
-        <p>Types partagés et interfaces pour tous les modules.</p>
-        <p><code>@kg/core</code></p>
-      </div>
-
-      <div class="module">
-        <h3>RDF I/O & Statistics <span class="status pending">TODO</span></h3>
-        <p>Chargement et export de graphes RDF (Turtle, RDF/XML, N-Triples).</p>
-        <p><strong>Responsable:</strong> Membre A</p>
-        <p><code>@kg/rdf</code></p>
-      </div>
-
-      <div class="module">
-        <h3>Ontology Management <span class="status pending">TODO</span></h3>
-        <p>Gestion des ontologies OWL/RDFS et hiérarchies de classes.</p>
-        <p><strong>Responsable:</strong> Membre B</p>
-        <p><code>@kg/ontology</code></p>
-      </div>
-
-      <div class="module">
-        <h3>SPARQL Query Engine <span class="status pending">TODO</span></h3>
-        <p>Exécution de requêtes SPARQL (SELECT, CONSTRUCT, ASK).</p>
-        <p><strong>Responsable:</strong> Membre C</p>
-        <p><code>@kg/sparql</code></p>
-      </div>
-
-      <div class="module">
-        <h3>Reasoning Engine <span class="status pending">TODO</span></h3>
-        <p>Moteur de raisonnement RDFS et OWL.</p>
-        <p><strong>Responsable:</strong> Responsable du projet</p>
-        <p><code>@kg/reasoning</code></p>
-      </div>
-
-      <div class="module">
-        <h3>Visualization & UI <span class="status pending">TODO</span></h3>
-        <p>Interface graphique et visualisation de graphes.</p>
-        <p><strong>Responsable:</strong> Membre D</p>
-        <p><code>@kg/visualization</code></p>
-      </div>
-
-      <h2>🚀 Prochaines étapes</h2>
-      <ol>
-        <li>Installer les dépendances: <code>npm install</code></li>
-        <li>Compiler les modules: <code>npm run build</code></li>
-        <li>
-          Tester les démos:
-          <ul>
-            <li><code>npm run demo:rdf</code></li>
-            <li><code>npm run demo:ontology</code></li>
-            <li><code>npm run demo:sparql</code></li>
-            <li><code>npm run demo:reasoning</code></li>
-          </ul>
-        </li>
-        <li>Consulter la documentation dans <code>docs/members/</code></li>
-      </ol>
-
-      <p style="margin-top: 40px; text-align: center; color: #999">
-        <small>Version 1.0.0 | Knowledge Graph Team © 2026</small>
-      </p>
-    </div>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

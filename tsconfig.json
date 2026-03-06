@@ -2,7 +2,9 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "commonjs",
-    "lib": ["ES2022"],
+    "lib": [
+      "ES2022"
+    ],
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,
@@ -13,13 +15,37 @@
     "sourceMap": true,
     "outDir": "./dist",
     "rootDir": "./",
-    "composite": true,
-    "incremental": true,
     "forceConsistentCasingInFileNames": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@kg/core": [
+        "packages/core/src"
+      ],
+      "@kg/visualization": [
+        "packages/visualization/src"
+      ],
+      "@kg/ontology": [
+        "packages/ontology/src"
+      ],
+      "@kg/rdf": [
+        "packages/rdf/src"
+      ],
+      "@kg/sparql": [
+        "packages/sparql/src"
+      ],
+      "@kg/reasoning": [
+        "packages/reasoning/src"
+      ]
+    }
   },
-  "exclude": ["node_modules", "dist", "**/node_modules", "**/dist"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/node_modules",
+    "**/dist"
+  ]
 }

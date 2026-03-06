@@ -32,12 +32,10 @@ export class RDFStore implements IRDFStore {
         const mimeType = this.formatToMimeType(format);
 
         return new Promise((resolve, reject) => {
-            try {
-                parse(data, this.store, baseURI, mimeType);
-                resolve();
-            } catch (error) {
-                reject(new Error(`Failed to parse ${format}: ${error}`));
-            }
+            parse(data, this.store, baseURI, mimeType, (err: Error | null | undefined) => {
+                if (err) reject(new Error(`Failed to parse ${format}: ${err}`));
+                else resolve();
+            });
         });
     }
 
@@ -175,7 +173,7 @@ export class RDFStore implements IRDFStore {
         const mimeTypes: Record<RDFFormat, string> = {
             turtle: 'text/turtle',
             'rdf-xml': 'application/rdf+xml',
-            'n-triples': 'application/n-triples',
+            'n-triples': 'application/n-quads',
             'n-quads': 'application/n-quads',
             'json-ld': 'application/ld+json',
         };
